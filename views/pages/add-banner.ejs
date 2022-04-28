@@ -1,0 +1,61 @@
+<!-- PAGE-HEADER -->
+<div class="page-header">
+    <h1 class="page-title"></h1>
+    <div>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="javascript:void(0)">Product Manager</a></li>
+            <li class="breadcrumb-item active" aria-current="page"><%- isUpdate ? 'Update' : 'Add' %> Banner</li>
+        </ol>
+    </div>
+</div>
+<!-- PAGE-HEADER END -->
+
+<!-- ROW-1 OPEN -->
+<!-- Row -->
+<div class="row ">
+    <div class="col-lg-12">
+        <div class="card" id="add-banner-form">
+            <input type="hidden" class="form-control" name="id" value="<%=id%>">
+            <div class="card-header">
+                <div class="card-title"><%- isUpdate ? 'Update' : 'Add New' %> Banner</div>
+            </div>
+            <div class="card-body">
+                <div class="row mb-4">
+                    <label class="col-md-3 form-label">Banner Name :</label>
+                    <div class="col-md-9">
+                        <input type="text" class="form-control" placeholder="Banner Name" name="name">
+                    </div>
+                </div>
+
+                <!-- Row -->
+                <div class="row">
+                    <label class="col-md-3 form-label mb-4">Description :</label>
+                    <div class="col-md-9 mb-4">
+                        <textarea class="form-control" name="description"></textarea>
+                    </div>
+                </div>
+                <!--End Row-->
+
+                <!--Row-->
+                <div class="row">
+                    <label class="col-md-3 form-label mb-4">Banner Image:</label>
+                    <div class="col-md-9">
+                        <input class="form-control" type="file" name="images" accept=".jpg, .png, image/jpeg, image/png">
+                    </div>
+                </div>
+                <!--End Row-->
+            </div>
+            <div class="card-footer">
+                <!--Row-->
+                <div class="row">
+                    <div class="col-md-3"></div>
+                    <div class="col-md-9">
+                        <a href="javascript:void(0)" class="btn btn-primary" onclick="<%if (isUpdate) {%>  BannerManager.update();  <%} else {%> BannerManager.add(); <%}%>"><%- isUpdate ? 'Update' : 'Add' %> Banner</a>
+                    </div>
+                </div>
+                <!--End Row-->
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /Row -->

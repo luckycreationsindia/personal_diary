@@ -1,11 +1,117 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-  </body>
+<!doctype html>
+<html lang="en" dir="ltr">
+
+<head>
+    <%- include ('includes/header'); -%>
+</head>
+
+<body class="app sidebar-mini ltr">
+
+<!-- GLOBAL-LOADER -->
+<div id="global-loader">
+    <img src="assets/images/loader.svg" class="loader-img" alt="Loader">
+</div>
+<!-- /GLOBAL-LOADER -->
+
+<!-- PAGE -->
+<div class="page">
+    <div class="page-main">
+
+        <!-- app-Header -->
+        <%- include ('includes/topbar'); -%>
+        <!-- /app-Header -->
+
+        <!--APP-SIDEBAR-->
+        <%- include ('includes/drawer'); -%>
+
+        <!--app-content open-->
+        <div class="main-content app-content mt-0">
+            <div class="side-app">
+
+                <!-- CONTAINER -->
+                <div class="main-container container-fluid pageloader">
+
+                </div>
+                <!-- CONTAINER CLOSED -->
+            </div>
+        </div>
+        <!--app-content closed-->
+    </div>
+
+    <!-- FOOTER -->
+    <%- include ('includes/footer') -%>
+    <!-- FOOTER CLOSED -->
+</div>
+
+<!-- BACK-TO-TOP -->
+<a href="#top" id="back-to-top"><i class="fa fa-angle-up"></i></a>
+
+<!-- JQUERY JS -->
+<script src="assets/js/jquery.min.js"></script>
+
+<!-- BOOTSTRAP JS -->
+<script src="assets/plugins/bootstrap/js/popper.min.js"></script>
+<script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+
+<!-- SIDE-MENU JS -->
+<script src="assets/plugins/sidemenu/sidemenu.js"></script>
+
+<!-- SIDEBAR JS -->
+<script src="assets/plugins/sidebar/sidebar.js"></script>
+
+<!-- INTERNAL SELECT2 JS -->
+<script src="../assets/plugins/select2/select2.full.min.js"></script>
+<script src="../assets/js/select2.js"></script>
+
+<!-- Perfect SCROLLBAR JS-->
+<script src="assets/plugins/p-scroll/perfect-scrollbar.js"></script>
+<script src="assets/plugins/p-scroll/pscroll.js"></script>
+<script src="assets/plugins/p-scroll/pscroll-1.js"></script>
+
+<!-- Color Theme js -->
+<script src="assets/js/themeColors.js"></script>
+
+<!-- Sticky js -->
+<script src="assets/js/sticky.js"></script>
+
+<!-- Block UI -->
+<script src="assets/plugins/jquery-blockUI/jquery.blockUI.js"></script>
+
+<!-- Image Upload UI -->
+<script src="assets/js/file-upload-with-preview.min.js"></script>
+
+<!-- CUSTOM JS -->
+<script src="assets/js/custom.js"></script>
+
+<!-- COMMONS JS -->
+<script src="js/commons.js"></script>
+
+<!-- USER MANAGER JS -->
+<script src="js/user_manager.js"></script>
+
+<!-- CATEGORY MANAGER JS -->
+<script src="js/category_manager.js"></script>
+
+<!-- PRODUCT MANAGER JS -->
+<script src="js/product_manager.js"></script>
+
+<!-- BANNER MANAGER JS -->
+<script src="js/banner_manager.js"></script>
+
+<!-- MAIN JS -->
+<script src="js/main.js"></script>
+
+<!-- BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS -->
+
+<script>
+    loadHashChange();
+    window.onload = function (e) {
+        $('[data-toggle="tooltip"]').tooltip();
+    }
+</script>
+
+<!-- BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS -->
+
+</body>
+
 </html>
